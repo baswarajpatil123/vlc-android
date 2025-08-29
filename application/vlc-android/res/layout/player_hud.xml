@@ -426,9 +426,26 @@
                     android:scaleType="fitCenter"
                     tools:visibility="visible"
                     vlc:layout_constraintBottom_toBottomOf="parent"
-                    vlc:layout_constraintEnd_toStartOf="@+id/player_overlay_forward"
+                    vlc:layout_constraintEnd_toStartOf="@+id/player_overlay_chapter"
                     vlc:layout_constraintStart_toEndOf="@+id/player_overlay_rewind"
                     vlc:srcCompat="@drawable/ic_pause_player" />
+
+            <ImageButton
+                    android:id="@+id/player_overlay_chapter"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/large_margins_center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/next_chapter"
+                    android:src="@drawable/ic_chapter_button"
+                    android:visibility="visible"
+                    tools:visibility="visible"
+                    vlc:layout_constraintBottom_toBottomOf="@+id/player_overlay_play"
+                    vlc:layout_constraintEnd_toStartOf="@+id/player_overlay_forward"
+                    vlc:layout_constraintStart_toEndOf="@+id/player_overlay_play"
+                    vlc:layout_constraintTop_toTopOf="@+id/player_overlay_play" />
 
             <ImageView
                     android:id="@+id/player_overlay_forward"
@@ -444,7 +461,7 @@
                     tools:visibility="visible"
                     vlc:layout_constraintBottom_toBottomOf="@+id/player_overlay_play"
                     vlc:layout_constraintEnd_toStartOf="@+id/playlist_next"
-                    vlc:layout_constraintStart_toEndOf="@+id/player_overlay_play"
+                    vlc:layout_constraintStart_toEndOf="@+id/player_overlay_chapter"
                     vlc:layout_constraintTop_toTopOf="@+id/player_overlay_play"
                     vlc:srcCompat="@drawable/ic_player_forward_10" />
 
@@ -485,6 +502,8 @@
                     vlc:layout_constraintStart_toEndOf="@+id/player_overlay_forward"
                     vlc:layout_constraintTop_toTopOf="@+id/player_overlay_play"
                     vlc:srcCompat="@drawable/ic_player_next" />
+
+
 
             <Space
                     android:id="@+id/player_space_right"
